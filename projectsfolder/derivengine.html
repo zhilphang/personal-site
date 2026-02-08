@@ -11,7 +11,7 @@
     color: #6b6b6b;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: -0.04em;
-    padding: 200px 24px;
+    padding: 50px 24px;
   }
 
   .content {
@@ -20,7 +20,7 @@
   }
 
   h1 {
-    font-size: 18px;
+    font-size: 36px;
     color: #e0e0e0;
     margin-bottom: 20px;
   }
@@ -31,11 +31,32 @@
     margin-bottom: 16px;
   }
 
-  nav {
-    position: fixed;
-    bottom: 60px;
+  .img-wrapper {
+    width: 100vw;
+    max-width: 1400px;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .img-caption {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #6b6b6b;
+    margin-top: 8px;
+    text-align: left;
+  }
+
+  nav {
+    margin-top: 40px;
+    text-align: center;
   }
 
   nav a {
@@ -51,8 +72,12 @@
 
 <body>
   <div class="content">
-    <h1>Data Infra: A 2-Minute Primer</h1>
-
+    
+    <div class="img-wrapper">
+      <img src="derivGLD.png" alt="Derivatives Risk Mapping Engine">
+      <p class="img-caption">GLD Options Analysis: Black-Scholes + Breeden-Litzenberger<br>Spot: $455.46 | Data as of February 08, 2026</p>
+    </div>
+<h1>Derivatives Mapping Engine</h1>
     <p>
       This piece explains the fundamentals of modern data infrastructure —
       warehouses, pipelines, and analytics layers — in under two minutes.
