@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Infra – Phil Zhang</title>
+<title>Derivatives Risk-Mapping Engine – Phil Zhang</title>
 
 <style>
   body {
@@ -11,51 +11,65 @@
     color: #6b6b6b;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: -0.04em;
-    padding: 50px 24px;
+    padding: 42px 24px 60px;
   }
 
   .content {
-    max-width: 520px;
+    max-width: 620px;
     margin: 0 auto;
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 33px;
     color: #e0e0e0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 15px;
+    color: #e0e0e0;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: 700;
   }
 
   p {
     font-size: 15px;
     line-height: 1.5;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
-  .img-wrapper {
-    width: 100vw;
-    max-width: 1400px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 20px;
+  ul, ol {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    padding-left: 24px;
   }
 
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
+  li {
+    margin-bottom: 8px;
   }
 
-  .img-caption {
-    font-size: 12px;
-    line-height: 1.4;
-    color: #6b6b6b;
-    margin-top: 8px;
-    text-align: left;
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    color: #e0e0e0;
+    font-weight: 700;
   }
 
   nav {
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
   }
 
@@ -67,26 +81,196 @@
   nav a:hover {
     color: #e0e0e0;
   }
+
+  .image-container {
+    margin: 30px 0;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .image-caption {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #7a7a7a;
+    margin-top: 8px;
+    font-style: italic;
+  }
 </style>
 </head>
 
 <body>
   <div class="content">
-    
-    <div class="img-wrapper">
+    <h1>Derivatives Risk-Mapping Engine</h1>
+
+    <div class="image-container">
       <img src="derivGLD.png" alt="Derivatives Risk Mapping Engine">
-      <p class="img-caption">GLD Options Analysis: Black-Scholes + Breeden-Litzenberger<br>Spot: $455.46 | Data as of February 08, 2026</p>
+      <div class="image-caption">
+        <span>GLD Options Analysis: Black-Scholes + Breeden-Litzenberger</span>
+        <span>February 8th 2026</span>
+      </div>
     </div>
-<h1>Derivatives Mapping Engine</h1>
+
+    <h2>Overview</h2>
     <p>
-      This piece explains the fundamentals of modern data infrastructure —
-      warehouses, pipelines, and analytics layers — in under two minutes.
+      Most options analysis focuses on implied volatility in isolation , a smile for one expiry, a term structure for another. That fragmented view often obscures where risk is actually being priced across the surface.
+    </p>
+    <p>
+      This project builds a derivatives risk-mapping engine that converts live options prices into market-implied probability distributions across strikes and maturities, allowing tail risk, skew, and convexity to be assessed in a single, unified framework. The engine is designed as a decision-support tool for trade selection and risk assessment, particularly around event risk and regime uncertainty.
+    </p>
+
+    <h2>Model Showcase - Alphabet (NASDAQ: GOOG)</h2>
+    <p>
+      To showcase the model in action, Alphabet (GOOG) is used as a representative example. The engine ingests live options data via a public market API as of 9 February, and transforms raw option prices into structured risk surfaces that reveal how volatility and probability are priced across strikes and maturities.
+    </p>
+
+    <div class="image-container">
+      <img src="derivleft.png" alt="GOOG Implied Volatility Surface">
+      <div class="image-caption">
+        <span>GOOG Options: Black-Scholes Implied Volatility Surface</span>
+        <span>February 9th 2026</span>
+      </div>
+    </div>
+
+    <p>
+      The implied volatility surface shows a pronounced downside skew at shorter expiries, with volatility rising sharply as strikes move below spot. This reflects concentrated demand for near-term downside protection, consistent with event-driven risk being actively hedged. As maturity increases, the surface flattens and volatility levels converge, indicating that uncertainty is not being extrapolated far into the future and that longer-dated risk is priced more symmetrically. In isolation, this surface highlights where dispersion is expensive, but does not reveal how probability mass is allocated.
+    </p>
+
+    <div class="image-container">
+      <img src="derivright.png" alt="GOOG Risk-Neutral Density Surface">
+      <div class="image-caption">
+        <span>GOOG Options: Breeden-Litzenberger Risk-Neutral Density</span>
+        <span>February 9th 2026</span>
+      </div>
+    </div>
+
+    <p>
+      The risk-neutral density surface makes this allocation explicit. Probability mass is heavily concentrated in the left tail at shorter maturities, confirming that downside outcomes are not only volatile but meaningfully priced. The curvature of the surface indicates strong convexity demand, with tail probabilities decaying more slowly than under a symmetric distribution. At longer maturities, the density broadens and flattens, suggesting regime uncertainty rather than a specific anticipated shock.
     </p>
 
     <p>
-      It’s written for operators, investors, and anyone trying to understand
-      how modern companies actually move data.
+      Viewed together, the two surfaces suggest that near-term risk in GOOG is being actively hedged, while longer-dated structural concerns remain present but less acute. The concentration of downside probability at shorter maturities points to market sensitivity around discrete catalysts rather than a sustained deterioration in long-term fundamentals. At the same time, the broader and flatter long-dated density implies ongoing uncertainty around structural themes , such as regulation, AI competition, and margin durability , without the market assigning high conviction to extreme outcomes. In combination, this indicates a market that is cautious in the near term but not pricing a deep, persistent downside regime for GOOG.
     </p>
+
+    <h2>Motivation</h2>
+    <p>
+      Options markets embed the collective expectations and risk preferences of market participants. While implied volatility captures dispersion, it does not explicitly show how probability mass is distributed or where asymmetries in risk pricing exist.
+    </p>
+    <p>
+      The core idea behind this engine is simple: option prices imply a probability distribution of future outcomes. By extracting and visualizing that distribution across time, it becomes possible to see where the market is paying for protection, speculating on upside, or underpricing convexity.
+    </p>
+    <p>
+      This approach moves analysis from volatility levels to risk structure.
+    </p>
+
+    <h2>What the Engine Does</h2>
+    <p>
+      The engine translates live options data into two complementary visual layers:
+    </p>
+    <ul>
+      <li><strong>Black–Scholes implied volatility surfaces</strong> to diagnose skew and term structure</li>
+      <li><strong>Breeden–Litzenberger risk-neutral density surfaces</strong> to reveal how probability mass is priced across strikes and maturities</li>
+    </ul>
+    <p>
+      Together, these surfaces provide insight into:
+    </p>
+    <ul>
+      <li>Downside vs upside asymmetry</li>
+      <li>Event-driven vs structural tail risk</li>
+      <li>Convexity demand across expiries</li>
+      <li>Shifts in market-implied consensus over time</li>
+    </ul>
+
+    <h2>Methodology & Architecture</h2>
+
+    <h3>1. Live Options Data Ingestion</h3>
+    <p>
+      Option chains are pulled in real time using publicly available market data. To ensure stability and robustness, contracts are filtered for liquidity, bid-ask quality, minimum time to expiry, and reasonable strike ranges relative to spot.
+    </p>
+
+    <h3>2. Black–Scholes Normalization</h3>
+    <p>
+      Market prices are inverted through the Black–Scholes model to compute implied volatilities. Black–Scholes is used here as a normalization and diagnostic framework, not as a belief about return distributions. This step ensures consistency across strikes and maturities and provides a benchmark for surface construction.
+    </p>
+
+    <h3>3. Surface Interpolation & Smoothing</h3>
+    <p>
+      Option prices are interpolated across strike–maturity space to form a smooth call price surface. Controlled smoothing is applied to mitigate microstructure noise, which is essential for numerical stability when computing higher-order derivatives.
+    </p>
+
+    <h3>4. Breeden–Litzenberger Density Extraction</h3>
+    <p>
+      Risk-neutral probability densities are recovered by applying the Breeden–Litzenberger relationship , the discounted second derivative of call prices with respect to strike. This yields a model-free view of how the market prices future outcomes at each maturity.
+    </p>
+
+    <h3>5. Visualization & Diagnostics</h3>
+    <p>
+      The extracted densities are stacked across maturities to form a 3D probability surface. This surface enables cross-sectional analysis of skew, convexity, and tail behavior in a single visual representation.
+    </p>
+
+    <h2>The Output</h2>
+    <p>
+      <strong>Strike dimension: where fear or speculation is concentrated</strong>
+    </p>
+    <ul>
+      <li>Fat left tails indicate crash risk being priced</li>
+      <li>Elevated right tails reflect upside convexity demand</li>
+    </ul>
+
+    <p>
+      <strong>Maturity dimension: when risk matters</strong>
+    </p>
+    <ul>
+      <li>Short-dated tails signal event-driven uncertainty</li>
+      <li>Long-dated tails point to structural or regime concerns</li>
+    </ul>
+
+    <p>
+      <strong>Surface shape: market psychology</strong>
+    </p>
+    <ul>
+      <li>Sharp peaks imply consensus outcomes</li>
+      <li>Wide or multi-modal distributions suggest disagreement or uncertainty</li>
+    </ul>
+
+    <p>
+      The surface represents risk-neutral probabilities , how risk is priced, not a forecast of realized outcomes.
+    </p>
+
+    <h2>Applications</h2>
+    <p>
+      The engine is designed to support:
+    </p>
+    <ul>
+      <li>Relative value analysis across expiries</li>
+      <li>Identification of overpriced or underpriced convexity</li>
+      <li>Event-risk assessment (earnings, macro releases)</li>
+      <li>Regime shift detection through changes in tail structure</li>
+    </ul>
+    <p>
+      Rather than predicting markets, it provides a framework for understanding where the market is expressing fear, complacency, or speculation.
+    </p>
+
+    <h2>Limitations & Scope</h2>
+    <p>
+      The model assumes static interest rates and excludes dividends, and its accuracy depends on the availability of liquid option markets. It is intentionally framed as a risk-mapping and visualization tool, not a predictive model of future returns.
+    </p>
+
+    <h2>Implementation</h2>
+    <p>
+      Built in Python using:
+    </p>
+    <ul>
+      <li>NumPy, Pandas for data handling</li>
+      <li>SciPy for numerical methods and optimization</li>
+      <li>Matplotlib for 3D visualization</li>
+      <li>Live options data sourced via public market APIs (Yahoo Finance)</li>
+    </ul>
   </div>
 
   <nav>
