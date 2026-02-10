@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Infra – Phil Zhang</title>
+<title>OpKey Investment Case – Phil Zhang</title>
 
 <style>
   body {
@@ -11,31 +11,76 @@
     color: #6b6b6b;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: -0.04em;
-    padding: 200px 24px;
+    padding: 42px 24px 60px;
   }
 
   .content {
-    max-width: 520px;
+    max-width: 620px;
     margin: 0 auto;
   }
 
   h1 {
-    font-size: 18px;
+    font-size: 33px;
     color: #e0e0e0;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  h1 .title-date {
+    font-size: 13px;
+    color: #7a7a7a;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  h2 {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 15px;
+    color: #e0e0e0;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: 700;
   }
 
   p {
     font-size: 15px;
     line-height: 1.5;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+  }
+
+  ul, ol {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    color: #e0e0e0;
+    font-weight: 700;
   }
 
   nav {
-    position: fixed;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 50px;
+    text-align: center;
   }
 
   nav a {
@@ -46,21 +91,280 @@
   nav a:hover {
     color: #e0e0e0;
   }
+
+  .category {
+    font-size: 14px;
+    color: #8a8a8a;
+    margin-bottom: 4px;
+    font-style: italic;
+  }
+
+  .date {
+    font-size: 13px;
+    color: #7a7a7a;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 15px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #6b6b6b;
+  }
+
+  th {
+    color: #e0e0e0;
+    font-weight: 700;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  td {
+    color: #6b6b6b;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
 </style>
 </head>
 
 <body>
   <div class="content">
-    <h1>Data Infra: A 2-Minute Primer</h1>
+    <h1>
+      <span>OpKey Investment Case</span>
+      <span class="title-date">February 2nd 2026</span>
+    </h1>
+    <p class="category">Category: CDI (Cybersecurity & Digital Infrastructure)</p>
+    <p class="category">"Software used to create, manage, optimize, and secure digital applications, footprints, infrastructure, and services."</p>
+    <p class="date">As part of my growth equity program at PeakSpan Capital, the capstone was to select one of PeakSpan's portfolio companies and evaluate it for investment; financials were not provided, and we were restricted from contacting the company for information.</p>
 
+    <h2>Executive Summary</h2>
     <p>
-      This piece explains the fundamentals of modern data infrastructure —
-      warehouses, pipelines, and analytics layers — in under two minutes.
+      Opkey represents a compelling growth-equity opportunity within the Cybersecurity & Digital Infrastructure software category, specifically focused on protecting the stability and integrity of enterprise ERP systems. As ERP platforms increasingly operate as cloud-based digital infrastructure with frequent, vendor-driven updates, enterprises face rising operational risk from change-induced failures rather than traditional uptime outages. Opkey addresses this problem by providing a continuous assurance and observability layer across the ERP lifecycle, embedding itself directly into enterprise change-management and governance workflows.
+    </p>
+    <p>
+      The investment thesis is underpinned by three factors:
+    </p>
+    <ol type="i">
+      <li>ERP systems are non-optional, mission-critical infrastructure with structurally rising complexity</li>
+      <li>Opkey is positioned not as a point testing tool, but as a digital infrastructure risk-mitigation platform</li>
+      <li>once embedded, Opkey benefits from high switching costs and expansion-driven growth</li>
+      </ol>
+    <p>
+      The company's scale potential supports credible $500m–$1.0bn exit outcomes, sufficient to deliver a 3–6× MOIC under reasonable ownership assumptions.</li>
+    </p>
+    <h2>Business Overview</h2>
+    <p>
+      Opkey provides software that helps large enterprises maintain the reliability, continuity, and operational integrity of their ERP systems as those systems undergo constant change. Modern enterprises rely on ERP platforms to run finance, supply chain, human resources, compliance, and order-to-cash processes. These systems are deeply embedded in day-to-day operations, meaning failures can immediately disrupt revenue, regulatory reporting, and employee productivity.</p>
+    <p>
+      As ERP vendors have moved their platforms to the cloud, update frequency has increased materially. Enterprises now face a continuous stream of system changes driven by vendor releases, internal configuration changes, and integrations with adjacent applications. The dominant risk in this environment is no longer system downtime, but change-induced failure, updates that silently break downstream business processes. Historically, enterprises have attempted to manage this risk through manual testing or script-heavy automation tools. Manual testing is slow, costly, and incapable of scaling with release velocity. Traditional automation tools, while faster, are brittle in complex ERP environments and require significant ongoing maintenance. As ERP stacks become more interconnected, both approaches have proven inadequate.</p>
+    <p>
+     Opkey addresses this gap by acting as a Continuous Integration and Continuous Delivery (CI/CD) layer for ERP digital infrastructure. The platform captures real ERP workflows, automatically validates them as systems change, and monitors behavior across updates to surface failures before they impact production users. In doing so, Opkey shifts ERP risk management from a reactive process to a continuous, preventative one. Once deployed, Opkey becomes part of the release-approval and governance process, making it operationally difficult to remove without materially increasing infrastructure risk.
     </p>
 
+    <h2>Market Overview & Sizing</h2>
     <p>
-      It’s written for operators, investors, and anyone trying to understand
-      how modern companies actually move data.
+      Enterprise ERP platforms represent over $60bn in annual global software spend and continue to grow as mission-critical workloads migrate to the cloud. While Opkey does not monetize ERP license spend directly, expanding ERP footprints materially increase enterprise dependence on system stability and raise the operational and financial cost of failure. As cloud ERP platforms introduce more frequent vendor-driven updates and configuration changes, this dynamic creates structural demand for infrastructure-grade assurance and observability layered on top of systems of record.
+    </p>
+    <p>
+      The addressable customer universe is derived from the global enterprise ERP installed base across Tier-1 platforms including SAP, Oracle, Workday, Salesforce, Microsoft Dynamics, Coupa, and Veeva. Collectively, these vendors serve approximately 25,000–30,000 enterprise-class customers globally; however, customer bases overlap significantly, as large enterprises typically operate multiple ERP systems concurrently. After adjusting for this overlap, the unique population of large enterprises running at least one Tier-1 ERP platform is estimated at ~8,000–10,000 customers. Assuming a conservative average contract value of ~$100k per enterprise, this implies a total addressable market of approximately $800m–$1.0bn in ARR. Opkey's ultimate share of this market will be driven by penetration within this customer base, expansion across multiple ERP systems per customer, and growth in average contract values over time.
+    </p>
+
+    <h2>Investment Thesis</h2>
+ 
+    <h2>1. ERP Is Mission-Critical Infrastructure</h2>
+    <p>
+      ERP systems function as systems of record for financials, supply chains, compliance, and workforce management. Disruption directly impacts revenue recognition and regulatory obligations. As enterprises migrate core processes to cloud ERP, assurance and reliability become infrastructure-grade requirements. Opkey protects against change-driven ERP failure, addressing a non-discretionary enterprise risk with infrastructure-like retention and pricing dynamics.
+    </p>
+   
+    <h2>2. Change Is the Primary Source of ERP Risk</h2>
+    <p>
+     In modern cloud ERP environments, risk is driven less by outages and more by continuous change. Vendor releases, configuration updates, and integrations introduce failure risk despite high uptime. CI/CD increases release velocity but does not ensure business-process integrity. Opkey closes this gap by continuously validating critical workflows as systems evolve, aligning release speed with operational safety.
+    </p>
+
+    <h2>3. Embedded Deployment Drives Expansion and Switching Costs</h2>
+    <p>
+      Opkey typically lands within discrete ERP modules or transformation initiatives and expands as enterprises standardize governance. Once embedded in release approval and control workflows, removal would require accepting higher operational risk or reverting to manual processes. This embeddedness supports high net retention, predictable expansion, and durable revenue.
+    </p>
+  
+    <h2>4. Infrastructure-Grade Profile Supports Attractive Exits</h2>
+    <p>
+      Within cybersecurity and digital infrastructure, platforms protecting mission-critical systems are underwritten on durability, predictability, and embeddedness rather than feature velocity. Opkey’s role as an ERP assurance layer aligns with this profile. As scale increases, revenue quality and margins increasingly resemble infrastructure software, supporting repeatable sponsor and strategic exit outcomes.
+    </p>
+ 
+    <h2>Competitive Landscape & Differentiation</h2>
+    <p>
+      The test automation market is dominated by horizontal platforms such as Tricentis Tosca, ACCELQ, SmartBear TestComplete, Katalon, and Selenium, which are designed to serve broad QA (quality assurance) use cases across web, mobile, API, and desktop environments. While these tools offer significant depth and flexibility, they are generally optimized for engineering-led testing programs and often require meaningful setup, maintenance, and specialist expertise, particularly in complex ERP environments. 
+    </p>
+    <p>
+      While competitors have some combination of Opkeys suite of features including no-code test creation, AI-assisted automation, and self-healing scripts, Opkey differentiates by prioritizing speed of deployment, ease of use, and ERP-native workflows, enabling business users to automate and validate critical processes with minimal configuration. This focus supports faster time-to-value and makes Opkey better suited to dynamic, high-change cloud ERP environments, where frequent vendor updates and configuration changes render traditional, heavier testing platforms less agile. As a result, Opkey competes less on feature breadth and more on usability, rapid ROI, and operational fit for ERP-centric enterprises.
+    </p>
+
+    <h2>Value Creation</h2>
+    <p>
+      Equity value creation in growth and private equity is typically driven by three levers: financial leverage, multiple expansion, and revenue and EBITDA growth. While all three can contribute to returns, their relevance depends on business maturity and risk profile. For Opkey, value creation is overwhelmingly driven by operating growth and margin expansion, with limited reliance on leverage and disciplined expectations around multiple uplift.
+    </p>
+    <p>
+      Financial leverage is a secondary contributor. While leverage can amplify equity returns in mature, cash-generative businesses, a dynamic popularised by late-cycle buyouts such as those depicted in Barbarians at the Gate, it is not central to the Opkey thesis. As a growth-stage software platform prioritising product investment and go-to-market expansion, Opkey is better suited to reinvestment-driven value creation, with only modest leverage introduced at scale.
+    </p>
+    <p>
+      Multiple expansion may contribute incrementally as the business de-risks and exhibits more infrastructure-like characteristics. In Opkey's case, any multiple uplift would be driven by improvements in revenue quality, higher net retention, larger enterprise ACVs, and deeper embedding within ERP governance workflows, rather than reliance on market re-rating alone.
+    </p>
+    <p>
+      Revenue and EBITDA growth are the primary value drivers. Opkey operates in a structurally expanding market, addressing a non-discretionary ERP change-risk problem with clear budget ownership and proven demand. Growth is driven by increased enterprise penetration, expansion across ERP platforms and modules, and rising wallet share within existing customers, while EBITDA expands through operating leverage as sales and R&D scale. Importantly, this growth is not predicated on core market adoption risk or unproven technology shifts; Opkey sells into established ERP installed bases with mission-critical use cases, materially reducing both demand and technology risk relative to earlier-stage software investments.
+    </p>
+
+    <h2>Key Risks & Mitigants</h2>
+
+    <h3>1. ERP Vendor Integration Risk</h3>
+    <ul>
+      <li><strong>Risk:</strong> Oracle, SAP, or Workday could build native testing capabilities, reducing demand for third-party solutions.</li>
+      <li><strong>Mitigant:</strong> ERP vendors have historically under-invested in testing and assurance tools. Their focus is on core application functionality, not change-risk infrastructure. Additionally, enterprises prefer vendor-neutral solutions to avoid lock-in. OpKey's multi-ERP strategy reduces dependency on any single platform.</li>
+    </ul>
+
+    <h3>2. Competitive Displacement</h3>
+    <ul>
+      <li><strong>Risk:</strong> Established players (Tricentis, Worksoft) or well-funded startups could accelerate product development and erode OpKey's differentiation.</li>
+      <li><strong>Mitigant:</strong> OpKey's no-code UX and ERP-native integration provide meaningful moats. Once deployed, displacement risk is low due to switching costs and workflow embeddedness. Competitive pressure is more likely to validate the category than displace incumbents.</li>
+    </ul>
+
+    <h3>3. Sales Execution Risk</h3>
+    <ul>
+      <li><strong>Risk:</strong> Enterprise sales cycles are long and resource-intensive. Execution risk around pipeline generation, deal velocity, and quota attainment could constrain growth.</li>
+      <li><strong>Mitigant:</strong> The investment would fund sales capacity expansion, partnerships with Oracle/SAP SIs, and customer success resources to drive retention and expansion. The product's ROI is defensible and measurable, which shortens sales cycles relative to speculative enterprise software.</li>
+    </ul>
+
+    <h3>4. Market Timing & Macro Sensitivity</h3>
+    <ul>
+      <li><strong>Risk:</strong> Enterprise software budgets contract during downturns, and discretionary spend on tooling may be deferred.</li>
+      <li><strong>Mitigant:</strong> OpKey addresses a non-discretionary risk (ERP change management), not a nice-to-have optimization. During budget scrutiny, tools that reduce operational risk and prevent costly failures tend to be prioritized, not cut. Historical precedent (observability, security, backup) supports counter-cyclical demand for assurance infrastructure.</li>
+    </ul>
+
+    <h2>Exit Outlook</h2>
+
+    <h3>Growth-Equity Underwriting Context</h3>
+    <p>
+      PeakSpan Capital investments are typically structured as <strong>non-control positions with varying liquidation preferences</strong>, targeting downside protection alongside attractive MOIC driven by operating growth rather than financial leverage. Check sizes often range between <strong>$5–35m</strong>, with ownership in the <strong>low- to mid-teens</strong>.
+    </p>
+
+    <h3>Entry Valuation Anchor</h3>
+    <p>
+      Opkey's <strong>$47m Series B</strong>, led by PeakSpan, provides a clear reference point for exit analysis. While PeakSpan's ownership is undisclosed, <strong>a reasonable assumption is that PeakSpan invested $20–35m for ~12–20% ownership</strong>, implying a <strong>post-money valuation of approximately $235–310m</strong>. This establishes the entry cost, against which all exit outcomes are assessed and is consistent with a scaled but still growth-oriented enterprise software platform.
+    </p>
+
+    <h3>Comparable Valuation Context</h3>
+    <p>
+      A relevant valuation benchmark is <strong>Tricentis</strong>, which as of November 2024 was valued at approximately <strong>$4.8bn in its acquisition by Vista Equity at a 14.1× ARR multiple</strong>. Tricentis reflects an upper-quartile outcome for large-scale, mission-critical enterprise testing and assurance platforms, albeit at a more mature growth profile than Opkey. This provides a credible ceiling for exit multiple assumptions rather than a base-case target.
+    </p>
+
+    <h3>Implied Current Scale for Opkey</h3>
+    <p>
+      Applying a conservative <strong>8–10× ARR multiple</strong> to Opkey's implied post-money valuation of <strong>$235–310m suggests current ARR of approximately $25–35m</strong>. This positions Opkey as a company that has meaningfully penetrated within enterprise ERP environments, but still early relative to category maturity such as Tricentis, leaving substantial headroom for revenue expansion without assuming category dominance.
+    </p>
+
+    <h3>MOIC Scenarios and Exit Economics</h3>
+    <p>
+      Growth-equity returns are driven by <strong>MOIC rather than headline valuation</strong>, with outcomes determined by ownership, exit value, and revenue scale at exit. Under a mid-case assumption of a <strong>$25m investment for 15% ownership</strong>, the following scenarios illustrate a reasonable return envelope:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Exit Value</th>
+          <th>Proceeds</th>
+          <th>MOIC</th>
+          <th>Implied ARR @ Exit</th>
+          <th>Exit Multiple</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$500m</td>
+          <td>~$75m</td>
+          <td>~3×</td>
+          <td>~$60-80m</td>
+          <td>~6-8×</td>
+        </tr>
+        <tr>
+          <td>$750m</td>
+          <td>~$113m</td>
+          <td>~4.5×</td>
+          <td>~$75-95m</td>
+          <td>~8-10×</td>
+        </tr>
+        <tr>
+          <td>$1.0bn</td>
+          <td>~$150m</td>
+          <td>~6×</td>
+          <td>~$90-120m</td>
+          <td>~8-12×</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Under this framework, a <strong>3× MOIC outcome requires Opkey to grow ARR from an implied ~$25-35m today to ~$60–80m at exit</strong>, representing an incremental <strong>$35–50m of net new ARR</strong>. A <strong>6× MOIC outcome requires ARR of ~$90–120m</strong>, implying <strong>$55–90m of incremental ARR</strong> relative to current scale. Importantly, this level of revenue growth remains <strong>well below the ~$400m ARR exit</strong> of Tricentis, reinforcing that attractive outcomes do not require category leadership or best-in-class scale.
+    </p>
+
+    <h3>Liquidation Preference Sensitivity</h3>
+    <p>
+      Liquidation preferences are an important consideration in growth-equity underwriting, as they shape capital recovery in non-deal and near-miss exit outcomes. They provide downside protection when exits fall short of target valuations, but <strong>do not enhance upside economics in successful outcomes</strong>. As exit values move materially above the preference threshold, investors convert to common equity and participate pro rata, rendering liquidation preferences largely irrelevant.
+    </p>
+    <p>
+      The table below illustrates this dynamic by showing investor proceeds and MOIC across varying liquidation preference multiples, holding ownership constant and fixing exit values across scenarios. This sensitivity highlights that liquidation structure matters most in downside or sub-scale exits, while <strong>base-case and upside outcomes are driven by ARR growth and exit valuation rather than capital structure mechanics</strong>.
+    </p>
+    <p>
+      <strong>Assumptions:</strong><br>
+      Investment: $25m · Ownership: 15% · Non-participating preference
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Liquidation Preference</th>
+          <th>$250m Exit</th>
+          <th>$350m Exit</th>
+          <th>$500m Exit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.0×</td>
+          <td>$37.5m / 1.5×</td>
+          <td>$52.5m / 2.1×</td>
+          <td>$75.0m / 3.0×</td>
+        </tr>
+        <tr>
+          <td>1.5×</td>
+          <td>$37.5m / 1.5×</td>
+          <td>$60.0m / 2.4×</td>
+          <td>$75.0m / 3.0×</td>
+        </tr>
+        <tr>
+          <td>2.0×</td>
+          <td>$50.0m / 2.0×</td>
+          <td>$70.0m / 2.8×</td>
+          <td>$75.0m / 3.0×</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Exit Pathways</h3>
+    <ol>
+      <li><strong>Staying Private</strong> – sponsor-to-sponsor transaction as Opkey matures into an infrastructure-like asset, or further growth rounds to fund expansion prior to exit.</li>
+      <li><strong>Strategic Acquisition</strong> – acquisition by enterprise software, observability, or infrastructure platforms seeking deeper control over ERP ecosystems and change-risk management.</li>
+      <li><strong>Going Public</strong> – IPO, direct listing, or SPAC are possible at sufficient scale, but not required to achieve attractive returns.</li>
+    </ol>
+    <p>
+      Overall, Opkey does not require a public-market outcome to deliver compelling growth-equity returns. <strong>Sponsor or strategic exits at $500m–$1.0bn valuations are sufficient to generate 3–6× MOIC</strong>, aligning with desired return profile under conservative, execution-driven assumptions.
     </p>
   </div>
 
